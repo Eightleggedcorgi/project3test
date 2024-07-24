@@ -8,8 +8,8 @@ const Index = (props) => {
     return props.weather.map((weather) => (
       <div key={weather._id} className="weather">
         <Link to={`/weather/${weather._id}`}><h1>{weather.name}</h1></Link>
-        <img src={weather.image} alt={weather.name} />
-        <h3>{weather.title}</h3>
+        <img src={weather.image} alt={weather.type} />
+        <h3>{weather.locations}</h3>
       </div>
     ));
   };
