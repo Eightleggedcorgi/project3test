@@ -13,7 +13,7 @@ app.use(express.json());
 
 // ROUTES
 app.use('/', routes)
-app.use((req, res) => {res.status(404).json({message: "NOT A ROUTE"})})
+app.use((req, res) => {res.status(404).json({message: 'NOT A ROUTE'})})
 
 // LISTENER
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
