@@ -3,8 +3,8 @@ const { weatherCtrl } = require('../controllers')
 
 // ROUTES - METHODS
 router.get('/', weatherCtrl.getWeather)
-/* router.post('/', peopleCtrl.createPeople)
-router.put('/:id', peopleCtrl.updatePerson)
-router.delete('/:id', peopleCtrl.deletePerson) */
+router.post('/', weatherCtrl.createWeather)
+router.put('/:id', weatherCtrl.updateWeather)
+router.delete('/:id', weatherCtrl.deleteWeather)
 
 module.exports = router;
