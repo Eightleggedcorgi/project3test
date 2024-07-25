@@ -40,7 +40,8 @@ function Index(props) {
         <Link to={`/weather/${weather._id}`}>
           <h1>{weather.name}</h1>
         </Link>
-        <img src={weather.image} alt={weather.type} />
+        <h2>{weather.type}</h2>
+        {/* <img src={weather.image} alt={weather.type} />  will use if we need to utilse images */}
         <h3>{weather.locations}</h3>
       </div>
     ));

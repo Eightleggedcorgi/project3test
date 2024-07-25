@@ -30,24 +30,24 @@ const Home = (props) => {
     const updateWeather = async (weather, id) => {
         // make post request to create weather
         await fetch(URL + id, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(person),
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(person),
         });
-        // update list of people
+        // update list of weather
         getWeather();
-      };
-      
-      const deleteWeather = async (id) => {
-        // make post request to create people
+    };
+
+    const deleteWeather = async (id) => {
+        // make post request to create weather events
         await fetch(URL + id, {
             method: "DELETE",
         });
-        // update list of people
+        // update weather list 
         getWeather();
-      };
+    };
 
     useEffect(() => {
         getWeather()
@@ -56,9 +56,9 @@ const Home = (props) => {
         <main>
             <Routes>
                 <Route path="/" element={<Index weather={weather} createWeather={createWeather} />} />
-                <Route path="/weather/:id" element={<Show weather={weather} 
-                updateWeather={updateWeather} 
-                deleteWeather={deleteWeather}/>} />
+                <Route path="/weather/:id" element={<Show weather={weather}
+                    updateWeather={updateWeather}
+                    deleteWeather={deleteWeather} />} />
             </Routes>
         </main>
     )

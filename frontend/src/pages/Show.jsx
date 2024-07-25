@@ -35,7 +35,7 @@ const Show = (props) => {
     <div className="weather">
       <h1>{weather.name}</h1>
       <h2>{weather.type}</h2>
-      <img src={weather.image} alt={weather.name} />
+      {/* <img src={weather.image} alt={weather.name} /> will use if we need to add images*/}
       <button id="delete" onClick={removeWeather}>
         DELETE
       </button>
@@ -103,7 +103,7 @@ const Show = (props) => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Update</button>
       </form>
     </div>
   );
