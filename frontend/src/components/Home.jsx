@@ -23,7 +23,7 @@ const Home = (props) => {
             },
             body: JSON.stringify(weather),
         });
-        // update list of weather
+        // update list of weather reports
         getWeather();
     };
 
@@ -34,7 +34,7 @@ const Home = (props) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(person),
+            body: JSON.stringify(weather),
         });
         // update list of weather
         getWeather();
@@ -55,7 +55,7 @@ const Home = (props) => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<Index weather={weather} createWeather={createWeather} />} />
+                <Route path="/" element={<Index weather={weather} createWeather={createWeather}/>}/>
                 <Route path="/weather/:id" element={<Show weather={weather}
                     updateWeather={updateWeather}
                     deleteWeather={deleteWeather} />} />

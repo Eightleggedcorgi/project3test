@@ -11,12 +11,12 @@ const Show = (props) => {
   const [editForm, setEditForm] = useState(weather);
 
   // handleChange function for form
-  const handleChange = (event) => {
-    setEditForm({ ...editForm, [event.target.name]: event.target.value });
+  const handleChange = (e) => {
+    setEditForm({ ...editForm, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     props.updateWeather(editForm, weather._id);
     navigate("/");
   };
