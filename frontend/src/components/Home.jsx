@@ -23,7 +23,29 @@ const Home = (props) => {
             },
             body: JSON.stringify(weather),
         });
+        // update list of weather reports
+        getWeather();
+    };
+
+    const updateWeather = async (weather, id) => {
+        // make post request to create weather
+        await fetch(URL + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(weather),
+        });
         // update list of weather
+        getWeather();
+    };
+
+    const deleteWeather = async (id) => {
+        // make post request to create weather events
+        await fetch(URL + id, {
+            method: "DELETE",
+        });
+        // update weather list 
         getWeather();
     };
 
@@ -33,8 +55,10 @@ const Home = (props) => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<Index weather={weather} createWeather={createWeather} />} />
-                <Route path="/weather/:id" element={<Show />} />
+                <Route path="/" element={<Index weather={weather} createWeather={createWeather}/>}/>
+                <Route path="/weather/:id" element={<Show weather={weather}
+                    updateWeather={updateWeather}
+                    deleteWeather={deleteWeather} />} />
             </Routes>
         </main>
     )
