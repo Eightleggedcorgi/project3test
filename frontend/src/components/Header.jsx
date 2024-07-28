@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Header = (props) => {
   return (
       <nav className='nav'>
-          <Link to="/">
-              <div>Weather App</div>
+          <Link to="/upload">
+              <div>Emergency Upload</div>
           </Link>
       </nav>
   );
