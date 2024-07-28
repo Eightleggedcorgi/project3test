@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.9);
+
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,12 +15,12 @@
 
 a {
   font-weight: 500;
-  color: #2631fa;
+  color: rgb(49, 148, 230);
   text-decoration: inherit;
-  transition: color 0.15s;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #6f9ff8;
+  color: blue;
 }
 
 body {
@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(221, 233, 233);
 }
 
 h1 {
@@ -47,8 +48,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.2s;
-  transition: color 0.25s;
-  transition: background-color 0.25s;
+  transition: color 0.2s;
+  transition: background-color 0.4s;
 }
 button:hover {
   border-color: white;
@@ -58,4 +59,8 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  background-color: white;
 }
