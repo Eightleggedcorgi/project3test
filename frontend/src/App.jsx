@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <Header />
       <WeatherSearch />
-      <h1>Weather Updates</h1>
       <WeatherInfo />
       <Routes>
         <Route path="/*" element={<Home />} />

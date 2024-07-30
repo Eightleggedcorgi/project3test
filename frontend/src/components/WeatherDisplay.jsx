@@ -32,7 +32,7 @@ const WeatherInfo = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div>
+        <div className="weather-list">
             <h2>Local Summary</h2>
             {/* <h3>Current Temperature: {temperature}°F</h3> */}
             <pre>{JSON.stringify(weatherSum, null, 2)}</pre>
