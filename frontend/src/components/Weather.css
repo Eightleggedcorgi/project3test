@@ -10,7 +10,37 @@
     
 
 }
+.weather-edit {
+    place-self: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #2f4680, #28cfb6);
+    display: block;
+    font-size: 20px;
+    gap: 20px;
+    line-height: 2.3rem;
+    
+}
 
+.weather-edit input {
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 30px;
+    color: #626262;
+    background: #ebfffc;
+    font-size: 18px
+}
+
+.weather-edit button {
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    margin: auto;
+    gap: 10px;
+   
+}
 .search-bar {
     display: flex;
     align-items: center;

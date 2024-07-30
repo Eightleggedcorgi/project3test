@@ -33,7 +33,7 @@ const WeatherEdit = ({ weather, updateWeather, deleteWeather }) => {
   if (!weatherItem) return <p>Loading...</p>;
 
   return (
-    <div className="weather">
+    <div className="weather-edit">
       <h1>Edit Weather Data</h1>
       <form onSubmit={handleSubmit}>
         <div>
