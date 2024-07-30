@@ -1,3 +1,4 @@
+//import "../index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -53,6 +54,7 @@ function Index(props) {
 
   return (
     <section>
+    <div classname="show">
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input
@@ -106,6 +108,7 @@ function Index(props) {
         <button type="submit">Submit</button>
       </form>
       {props.weather ? loaded() : loading()}
+      </div>
     </section>
   );
 }
