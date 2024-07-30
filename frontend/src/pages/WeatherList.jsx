@@ -5,23 +5,26 @@ const WeatherList = ({ weather }) => {
     if (!weather) return <p>Loading...</p>;
 
     return (
-        <div>
+        <div className="weather-list">
             <h2>Emergency Weather Data</h2>
-            {weather.map((weatherItem) => (
-                <div key={weatherItem._id} className="weather">
-                     <img src={weather.image} alt={weather.type} />  
-                    <Link to={`/weather/${weatherItem._id}`}>
-                        <h3>{weatherItem.name}</h3>
-                    </Link>
-                    <p>{weatherItem.locations}</p>
-                    <p>Death Toll {weatherItem.deathtoll}</p>
-                    <p>Est.Damages {weatherItem.estdamages}</p>
-                </div>
-            ))}
+            <div className="weather-container">
+                {weather.map((weatherItem) => (
+                    <div key={weatherItem._id} className="weather-item">
+                        <img src={weather.image} alt={weather.type} />
+                        <Link to={`/weather/${weatherItem._id}`}>
+                            <h3>{weatherItem.name}</h3>
+                        </Link>
+                        <p>{weatherItem.locations}</p>
+                        <p>Death Toll: {weatherItem.deathtoll}</p>
+                        <p>Estimated Damages: {weatherItem.estdamages}</p>
+                    </div>
+                ))}
+            </div>
+            <div>
             <Link to="/upload">Add New Weather Report</Link>
+            </div>
         </div>
     );
 };
 
 export default WeatherList;
-
