@@ -1,0 +1,22 @@
+Daniel assigned to backend
+Nick assigned to frontend
+Still waiting for a response from Oscar
+Instructors say their computer broke and hasn't been able to turn on again
+
+Designed the backend using the express-react lesson as an example
+Will differentiate and customize it further as the project progresses
+
+Katie was very helpful in untangling my(Daniel's) stupidity in trying to make the backend out of a react template
+Also finally had it clarified that we do not need to use some API we find on the internet and we're supposed to make it ourselves, which we already did
+
+Main page is working so the frontend and backend are talking to each other, now just need to make separate pages for the different CRUD routes so data can actually be entered (and deleted)
+Downloaded the combined frontend and backend through the download zip option on github, backend acquired through download has an unbeforeseen error of 
+"The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."
+Peculiarly running my personal copy of the backend still works fine and works in tandem with the downloaded frontend
+
+Figured out that while npm i was working, I also needed to copyt the .env file to the downloaded backend as .env is gitignored
+
+Next phase is building the frontend to support the CRUD routes as all we have currently is an empty main page, and we can't really test how mongo is working with the project with no way to even add data
+Except maybe Postman, but it feels like it hates me on a personal level
+
+Once we have all the routes working with a frontend to support them and their processes, all that remains is making the pages look bloody beautiful
