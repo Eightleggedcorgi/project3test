@@ -165,3 +165,14 @@
     transform: scale(1.05);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .weather-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-item {
+        width: 90%;
+    }
+}
