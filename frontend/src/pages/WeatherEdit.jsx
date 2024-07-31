@@ -1,44 +1,40 @@
-import { useState } from "react";
+// src/components/WeatherEdit.jsx
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Show = (props) => {
-  const params = useParams();
+const WeatherEdit = ({ weather, updateWeather, deleteWeather }) => {
+  const { id } = useParams();
   const navigate = useNavigate();
-  const id = params.id;
-  const allWeather = props.weather;
-  const weather = allWeather.find((p) => p._id === id);
+  const weatherItem = weather.find((item) => item._id === id);
 
-  const [editForm, setEditForm] = useState(weather);
+  const [editForm, setEditForm] = useState(weatherItem);
 
-  // handleChange function for form
+  useEffect(() => {
+    if (weatherItem) {
+      setEditForm(weatherItem);
+    }
+  }, [weatherItem]);
+
   const handleChange = (e) => {
     setEditForm({ ...editForm, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.updateWeather(editForm, weather._id);
+    updateWeather(editForm, weatherItem._id);
     navigate("/");
   };
 
-  const removeWeather = (e) => {
-    e.preventDefault();
-    props.deleteWeather(weather._id);
+  const handleDelete = () => {
+    deleteWeather(weatherItem._id);
     navigate("/");
   };
 
-  if (!weather) {
-    return <h1>Loading...</h1>;
-  }
+  if (!weatherItem) return <p>Loading...</p>;
 
   return (
-    <div className="weather">
-      <h1>{weather.name}</h1>
-      <h2>{weather.type}</h2>
-      {/* <img src={weather.image} alt={weather.name} /> will use if we need to add images*/}
-      <button id="delete" onClick={removeWeather}>
-        DELETE
-      </button>
+    <div className="weather-edit">
+      <h1>Edit Weather Data</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
@@ -105,15 +101,9 @@ const Show = (props) => {
         </div>
         <button type="submit">Update</button>
       </form>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
 
-export default Show;
-
-
-      
-
-  
-
-
+export default WeatherEdit;
