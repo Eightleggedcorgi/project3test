@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import naturalDIcon from  '../assets/WeatherDisIcon.png';
 
 const WeatherList = ({ weather }) => {
     if (!weather) return <p>Loading...</p>;
@@ -10,7 +11,7 @@ const WeatherList = ({ weather }) => {
             <div className="weather-container">
                 {weather.map((weatherItem) => (
                     <div key={weatherItem._id} className="weather-item">
-                        <img src={weather.image} alt={weather.type} />
+                        <img src={naturalDIcon} alt={weather.type} />
                         <Link to={`/weather/${weatherItem._id}`}>
                             <h3>{weatherItem.name}</h3>
                         </Link>

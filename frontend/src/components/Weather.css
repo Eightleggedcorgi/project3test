@@ -201,7 +201,7 @@ body {
     transform: scale(1.05);
 }
 
-a {
+    a {
     font-weight: 500;
     color: blue;
     text-decoration: inherit;
@@ -215,3 +215,4 @@ a:hover {
 .addnew {
     padding-top: 8px;
 }
+
