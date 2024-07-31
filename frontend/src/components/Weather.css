@@ -1,3 +1,7 @@
+body {
+    background-image: linear-gradient(145deg, rgb(107, 212, 212), lightcyan);
+}
+
 .weather {
     place-self: center;
     padding: 40px;
@@ -7,9 +11,9 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
 
 }
+
 .weather-edit {
     place-self: center;
     padding: 30px;
@@ -19,7 +23,7 @@
     font-size: 20px;
     gap: 20px;
     line-height: 2.3rem;
-    
+
 }
 
 .weather-edit input {
@@ -39,13 +43,45 @@
     border-radius: 30px;
     margin: auto;
     gap: 10px;
-   
+    cursor: pointer;
+    transition: border-color 0.2s;
+    transition: color 0.2s;
+    transition: background-color 0.4s;
+
 }
+
+.weather-edit button:hover {
+    border-color: white;
+    color: white;
+    background-color: #2f4680;
+}
+
+#bigsubmit {
+    border-radius: 8px;
+    border: 2px solid black;
+    padding: 0.3em 0.6em;
+    margin: 0.3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: rgb(185, 238, 238);
+    cursor: pointer;
+    transition: border-color 0.2s;
+    transition: color 0.2s;
+    transition: background-color 0.4s;
+}
+
+#bigsubmit:hover {
+    border-color: white;
+    color: white;
+    background-color: #2f4680;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     gap: 12px;
-    
+
 }
 
 .search-bar input {
@@ -66,13 +102,13 @@
     border-radius: 65%;
     background: #ebfffc;
     cursor: pointer;
-    
+
 }
 
 .weather-icon {
     width: 150px;
     margin: 30px 0;
-    
+
 }
 
 .temperature {
@@ -92,7 +128,7 @@
     width: 100%;
     margin-top: 40px;
     color: #fff;
-    
+
 }
 
 .weather-data .column {
@@ -136,7 +172,7 @@
     width: 300px;
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
+    background-image: linear-gradient(120deg, #28cfb6, rgb(113, 245, 245));
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: flex;
@@ -157,10 +193,25 @@
 }
 
 .weather-item p {
-    margin: 10px 0;
+    margin: 10px;
     font-size: 16px;
 }
 
 .weather-item:hover {
     transform: scale(1.05);
+}
+
+a {
+    font-weight: 500;
+    color: blue;
+    text-decoration: inherit;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: rgb(155, 16, 16);
+}
+
+.addnew {
+    padding-top: 8px;
 }
