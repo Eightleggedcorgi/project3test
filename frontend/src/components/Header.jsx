@@ -1,4 +1,4 @@
-import "../App.css";
+import "../stylenick.css";
 import { Link } from "react-router-dom";
 import weatherLogo from  '../assets/naturalDisasterIcon.png';
 

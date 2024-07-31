@@ -1,4 +1,3 @@
-//import "../index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -105,7 +104,7 @@ function Index(props) {
           value={newForm.estdamages}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" id="bigsubmit" >Submit</button>
       </form>
       {props.weather ? loaded() : loading()}
       </div>

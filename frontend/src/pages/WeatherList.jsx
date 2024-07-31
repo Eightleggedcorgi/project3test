@@ -21,7 +21,7 @@ const WeatherList = ({ weather }) => {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className = "addnew">
             <Link to="/upload">Add New Weather Report</Link>
             </div>
         </div>

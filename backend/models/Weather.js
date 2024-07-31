@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const WeatherSchema = new mongoose.Schema({
-    name: String,
+    name: {type: String, required: true,},
     type: String,
     startdate: String,
     enddate: String,
