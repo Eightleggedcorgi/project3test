@@ -5,12 +5,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-<<<<<<< HEAD
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #9e4444;
-=======
   color: rgba(0, 0, 0, 0.9);
->>>>>>> 4951e307c3423fbb6ae7c3deae7717dd41d3ea84
 
 }
 
@@ -72,11 +67,7 @@ button:hover {
   background-color: rgb(185, 238, 238);
 }
 
-<<<<<<< HEAD
-
-=======
 .nav {
   background-color: white;
   border: 2px solid black;
 }
->>>>>>> 4951e307c3423fbb6ae7c3deae7717dd41d3ea84
