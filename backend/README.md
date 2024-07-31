@@ -16,6 +16,7 @@ Ever wanted to catalogue the natural disasters nearest and dearest to your heart
 * Cors
 * Dotenv
 * Express
+* React
 * Mongoose
 * Nodemon
 * Node Fetch
